@@ -40,8 +40,9 @@ services:
   npm-db-backup:
     container_name: npm-db-backup
     restart: always
-    image: vnspc/mysql-backup:8.2
+    image: vnspc/mysql-backup:8.3
     environment:
+      - TZ=${TZ:-UTC}
       - SCHEDULE=${SCHEDULE:-@weekly}
       - BACKUP_KEEP_DAYS=${BACKUP_KEEP_DAYS:-7}
       - PASSPHRASE=${PASSPHRASE:-passphrase}
