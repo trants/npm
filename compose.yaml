@@ -54,6 +54,7 @@ services:
       - MYSQL_HOST=${MYSQL_HOST:-mysql}
       - MYSQL_USER=${MYSQL_USER:-npm}
       - MYSQL_DATABASE=${MYSQL_DATABASE:-npm-production}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD-npmPassword}
     depends_on:
       - npm-db
     networks:
