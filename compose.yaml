@@ -21,7 +21,7 @@ services:
     depends_on:
       - npm-db
     networks:
-      - network-bridge
+      - vspc
 
   npm-db:
     container_name: npm-db
@@ -35,7 +35,7 @@ services:
     volumes:
       - /home/data/npm/mysql:/var/lib/mysql
     networks:
-      - network-bridge
+      - vspc
 
   npm-db-backup:
     container_name: npm-db-backup
@@ -58,9 +58,9 @@ services:
     depends_on:
       - npm-db
     networks:
-      - network-bridge
+      - vspc
 
 networks:
-  network-bridge:
+  vspc:
     driver: bridge
-    name: network-bridge
+    name: vspc
