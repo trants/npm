@@ -4,7 +4,7 @@ services:
   npm:
     container_name: npm
     restart: always
-    image: "jc21/nginx-proxy-manager:2.11.1"
+    image: "jc21/nginx-proxy-manager:2.11.2"
     ports:
       - '80:80'
       - '81:81'
